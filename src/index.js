@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DashApp from './dashApp';
+import './style.css';
 
 ReactDOM.render(
   <DashApp />,

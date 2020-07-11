@@ -1,0 +1,130 @@
+.header {
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  transition: width .25s ease;
+  box-sizing: border-box;
+  top: 0;
+  min-width: 0;
+
+  .header-container {
+    margin: 0 30px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 100%;
+
+    .header-mobile-menu {
+      margin-right: 15px;
+      svg {
+        width: 18px;
+        height: 18px;
+        fill: white;
+      }
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+
+      .logo-image {
+        width: 60px;
+        height: 50px;
+        background: rgba(0,0,0,0);
+      }
+
+      .logo-container {
+        margin-left: 10px;
+        height: 100%;
+
+        .logo-text {
+          color: white;
+          white-space: nowrap
+        }
+      }
+
+      svg {
+        width: 35px;
+        height: 35px;
+        fill: hsla(0,0%,100%,);
+      }
+    }
+
+    .navigator {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      li {
+        margin-left: 20px;
+        color: hsla(0,0%,100%,.75);
+        white-space: nowrap
+      }
+    }
+
+    .search-container {
+      margin-left: 20px;
+      display: flex;
+      flex: 1 1 auto;
+      align-items: center;
+    }
+
+    .right-container {
+      display: flex;
+      margin-left: auto;
+      height: 32px;
+
+      & > div, button {
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      svg {
+        height: 18px;
+        width: 18px;
+        fill: hsla(0,0%,100%,.75);
+        cursor: pointer;
+
+        &:hover {
+          fill: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .search-container {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .search-icon {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  #header--upload-btn {
+    display: none;
+  }
+}
+@media screen and (min-width: 770px) {
+  .header-mobile-menu {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  #header--sign-up-btn, #header--login-btn, .navigator {
+    display: none !important;
+  }
+  .logo-container {
+    svg {
+      width: 25px !important;
+      height: 25px;
+    }
+  }
+}

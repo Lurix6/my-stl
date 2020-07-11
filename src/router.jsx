@@ -10,7 +10,7 @@ const PublicRouter = ({ history, isLoggedIn}) => (
       <Route
         exact
         path="/signin"
-        component={ SignIn }
+        component={ App }
       />
       <Route
         exact

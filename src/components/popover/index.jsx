@@ -1,12 +1,9 @@
 import React from 'react';
-import {Popover} from 'antd';
+import { Popover } from 'antd';
 import './styles.scss';
 
-const Popover = (props) => {
-
-  return (
+const PopoverL = (props) => (
     <Popover { ...props } />
   )
-}
 
-export default  Popover;
+export default  PopoverL;

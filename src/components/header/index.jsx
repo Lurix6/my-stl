@@ -2,14 +2,15 @@ import React from 'react';
 import './header';
 import Button from '../button/';
 import Field from '../field/';
-import Popover from '../tooltip';
+import Popover from '../popover/';
 import { ArrowUpOutlined, ShoppingCartOutlined, SearchOutlined, CodeSandboxOutlined, MenuOutlined }  from '@ant-design/icons';
 
-function Header(props) {
+function Header({ changeVisible }) {
+
   return (
     <header className="header">
       <div className="header-container">
-        <div className="header-mobile-menu">
+        <div className="header-mobile-menu" onClick={ changeVisible } >
           <MenuOutlined />
         </div>
         <div className="logo-container">
@@ -21,7 +22,7 @@ function Header(props) {
           </div>
         </div>
         <ul className="navigator">
-          <Popover position={"bottom"}  content={<div>Hello content</div>} >
+          <Popover content={<div>Hello content</div>} >
             <li>Explore</li>
           </Popover>
           <li>Buy 3D models</li>

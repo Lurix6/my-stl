@@ -1,6 +1,37 @@
+.appContainer {
+
+
+  .navigation {
+    transition: transform .15s ease-in-out;
+    transition-delay: 1s;
+    background: #1c88bb;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+  }
+
+  .navigationOpen {
+    display: block;
+  }
+  
+  .containerWithOpenNavigator {
+    padding-left: 250px;
+  }
+  
+}
+
 .hero {
   width: 100%;
   background: linear-gradient(45deg,#19295a,#2ec3fb);
   padding-top: 70px;
   height: 140px;
+}
+
+@media screen and (min-width: 770px) {
+  .navigation {
+    display: none;
+  }
 }

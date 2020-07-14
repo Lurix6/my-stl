@@ -51,11 +51,6 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run format"
-    }
-  },
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
     "file-loader": "^6.0.0",

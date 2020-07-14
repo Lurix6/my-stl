@@ -1,6 +1,7 @@
 import React from 'react';
 import './header';
 import Button from '../button/';
+import { Link } from "react-router-dom";
 import Field from '../field/';
 import Popover from '../popover/';
 import { ArrowUpOutlined, ShoppingCartOutlined, SearchOutlined, CodeSandboxOutlined, MenuOutlined }  from '@ant-design/icons';
@@ -22,11 +23,15 @@ function Header({ changeVisible }) {
           </div>
         </div>
         <ul className="navigator">
-          <Popover content={<div>Hello content</div>} >
-            <li>Explore</li>
-          </Popover>
-          <li>Buy 3D models</li>
-          <li>For business</li>
+          <li>
+            <Link to="/prepareModel">Готова модель</Link>
+          </li>
+          <li>
+            <Link to="/store">Купити модель</Link>
+          </li>
+          <li>
+            <Link to="/sell">Продати модель</Link>
+          </li>
         </ul>
         <div className="search-container">
             <Field placeholder="Search 3D models" icon={<SearchOutlined width={20} height={20} />} fullWidth />

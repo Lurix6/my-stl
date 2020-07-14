@@ -9,14 +9,14 @@ const PublicRouter = ({ history, isLoggedIn}) => (
     <Route
       exact
       path="/signin"
-      component={ App }
+      component={ () => <div>SignIn Page </div> }
     />
     <Route
       exact
       path="/forgotpassword"
       component={() => <div>Forgot password</div> }
     />
-    <RegisteredRoute path="/" component={App} isLoggedIn={false} />
+    <RegisteredRoute path="/" component={App} isLoggedIn={true} />
   </Switch>
 )
 

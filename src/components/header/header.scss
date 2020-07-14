@@ -5,6 +5,7 @@
   transition: width .25s ease;
   box-sizing: border-box;
   top: 0;
+  background: linear-gradient(45deg,#19295a,#2ec3fb);
   min-width: 0;
 
   .header-container {
@@ -106,11 +107,18 @@
   }
 }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 1025px) {
   #header--upload-btn {
     display: none;
   }
 }
+
+@media screen and (max-width: 880px) {
+  #header--sign-up-btn {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 770px) {
   .header-mobile-menu {
     display: none !important;

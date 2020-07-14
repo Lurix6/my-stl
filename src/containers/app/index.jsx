@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../../components/header';
 import classNames from 'classnames';
+import { Layout } from 'antd';
+import AppRouter from './AppRouter'
 import './app.scss';
 
 const SignIn = (props) => {
@@ -20,8 +22,8 @@ const resizeHendle = (e) => {
   if (e.target.innerWidth > 770) {
     setVisisble(false)
   }
-
 }
+
   return (
     <div className="appContainer"> 
       <div className={ classNames("navigation", { navigationOpen: visible })}>
@@ -29,9 +31,9 @@ const resizeHendle = (e) => {
       </div>
       <div className={ classNames('container', {containerWithOpenNavigator: visible }) }>
         <Header changeVisible={changeVisible} />
-        <div className="hero">
-          app
-        </div>
+        <Layout style={{paddingTop: '60px'}}>
+          <AppRouter />
+        </Layout>
       </div>
     </div>
   )

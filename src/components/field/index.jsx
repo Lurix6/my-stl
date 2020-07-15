@@ -17,7 +17,7 @@ const Field = (props) => {
   
   return (
     <div className={ classNames('field', className, {'field-full-width': fullWidth}, {'field-clean-icon': cleanBnt}, {'field-focused': state.focused }) }>
-      <div className='field-icon-container'>{icon && icon}</div>
+      <div className='field-icon-container' >{icon && icon}</div>
       <input
         className={classNames('field-full-width')}
         placeholder={ placeholder }

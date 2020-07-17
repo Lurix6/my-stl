@@ -31,9 +31,9 @@ const resizeHendle = (e) => {
       </div>
       <div className={ classNames('container', {containerWithOpenNavigator: visible }) }>
         <Header changeVisible={changeVisible} />
-        <Layout style={{paddingTop: '60px'}}>
+        <div style={{paddingTop: '60px'}}>
           <AppRouter />
-        </Layout>
+        </div>
       </div>
     </div>
   )

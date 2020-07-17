@@ -1,6 +1,7 @@
 .header {
   height: 60px;
   position: fixed;
+  z-index: 100;
   width: 100%;
   transition: width .25s ease;
   box-sizing: border-box;

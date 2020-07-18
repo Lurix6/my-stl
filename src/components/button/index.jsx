@@ -4,7 +4,10 @@ import classNames from 'classnames';
 
 const Button = (props) => {
 
-  const renderText = (text, upperCase, lowerCase) => {
+  const renderText = (children , text, upperCase, lowerCase) => {
+
+    if (children) return children
+
     const stringText = String(text) 
 
     if( lowerCase ) return stringText.toLowerCase();
@@ -16,7 +19,7 @@ const Button = (props) => {
 
   const { className, id,children, label, ghost,  upperCase, lowerCase, icon, type } = props;
 
-  const text = renderText(children || label || '', upperCase, lowerCase);
+  const text = renderText(children , label || '', upperCase, lowerCase);
 
   return (
     <button 

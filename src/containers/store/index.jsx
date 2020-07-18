@@ -1,10 +1,46 @@
 import React, { Fragment } from 'react';
-import HeroContainer from '../../components/heroContainer/'
-import './style.scss'
+import HeroContainer from '../../components/heroContainer/';
+import Cart from '../../components/cart/';
+import CategoriesModels from './categoriesModels/';
+import Button from '../../components/button/';
+import { Link } from 'react-router-dom';
+import './style.scss';
 
 const StorePage = () => {
   const title = 'The way to buy 3D models';
   const subTitle = 'High-quality 3D models for VFX, game development, VR/AR, architecture, and animation.'
+
+  const baguets = [
+    {
+      imgSrc:"http://art-master3d.com/image/cache/data/Category/Baget/baget-dlya-chpu-072-1079x606.jpg",
+      footerLeft:"Багет 1",
+      footerRight:"120 $"
+    },
+    {
+      imgSrc:"http://art-master3d.com/image/cache/data/Category/Baget/STL-baget-dlya-chpu-053-1079x606.jpg", 
+      footerLeft:"Багет 2",
+      footerRight:"120 $",
+    },
+    {
+      imgSrc:"http://art-master3d.com/image/cache/data/Category/Baget/baget-dlya-chpu-020-1079x606.jpg",
+      footerLeft:"Багет 3",
+      footerRight:"120 $",
+    },
+    {
+      imgSrc:"http://art-master3d.com/image/cache/data/Category/Baget/baget-dlya-chpu-072-1079x606.jpg",
+      footerLeft:"Багет 4",
+      footerRight:"120 $",
+    }
+  ]
+
+  const categoriesModels = [
+    'Багети',
+    'Балясини',
+    'Двері',
+    'Декор',
+    'Декор угловий',
+    'Ікони',
+  ];
 
   return (
     <>
@@ -27,38 +63,23 @@ const StorePage = () => {
           </ul>
         </div>  
       </div>
-      <div className="store-categories-models">
-        <div className="store-categories-item">
-          <div className="store-categories-item__header" >
-            Багети
-          </div>
-          <div className="store-categories-item__content" >
-            <div className="store-categories-item__cart">
-              <div className="cart-content__image">
-                <img src="https://lh3.googleusercontent.com/proxy/KcFN0uG1bE_b6bJBUy6SfeN89LTFj91kJiKFCycTsgg91P5FetnTcFnGEEMAv-8ysR6cqdTwuGad_v3BHV5-LxT4UEykt-fMPdbg7lXzsPxAam055EK0HykOKWkPfJXguhVzF0O6TyqKkG7FEY3tCIceSVo" />
-              </div>
-              <div className="cart-content__text">
-                <div className="cart-content__description">
-                  Багет 1
-                </div>
-                <div className="cart-content__price">
-                 10 ?
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="store-categories-item">
-          <div className="store-categories-item__header" >
-          Балясини
-          </div>
-          <div className="store-categories-item__content" >
-            <div className="store-categories-item__cart">
-              <img src="https://lh3.googleusercontent.com/proxy/KcFN0uG1bE_b6bJBUy6SfeN89LTFj91kJiKFCycTsgg91P5FetnTcFnGEEMAv-8ysR6cqdTwuGad_v3BHV5-LxT4UEykt-fMPdbg7lXzsPxAam055EK0HykOKWkPfJXguhVzF0O6TyqKkG7FEY3tCIceSVo" />
-            </div>
-          </div>
-        </div>
+      {
+        categoriesModels.map(category => 
+          <CategoriesModels title={category} > 
+            {
+              baguets.map( ({ imgSrc, footerLeft, footerRight}) => 
+                <Cart  imgSrc={imgSrc} footerLeft={footerLeft} footerRight={footerRight} />
+              )
+            }
+          </CategoriesModels>
+        )
+      }
+      <div className="shoveAll">
+        <Button>
+          <Link to="/store/categories">
+             Показати всі категорії
+          </Link>
+        </Button>
       </div>
     </>
   )

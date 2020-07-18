@@ -1,11 +1,18 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import StorePage from '../store/';
+import CategoriesPage from '../../containers/categories/'
 
 const routes = [
   {
     path: 'store',
+    exact: true,
     component: StorePage 
+  },
+  {
+    path: 'store/categories',
+    exact: true,
+    component: CategoriesPage  
   },
   {
     path: 'prepareModel',

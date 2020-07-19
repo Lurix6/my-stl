@@ -23,13 +23,19 @@
         display: flex;
         position: relative;
         align-items: center;
+        cursor: pointer;
 
-        svg {
-          font-size: 30px;
-          margin-right: 10px;
-          fill: $base-color1;
+        .login-page__header__logo {
+          display: flex;
+          align-items: center;
+
+          svg {
+            font-size: 30px;
+            margin-right: 10px;
+            fill: $base-color1;
+          }
+
         }
-
       }
     }
 

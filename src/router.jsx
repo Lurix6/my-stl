@@ -16,7 +16,7 @@ const PublicRouter = ({ history, isLoggedIn}) => (
       path="/forgotpassword"
       component={() => <div>Forgot password</div> }
     />
-    <RegisteredRoute path="/" component={App} isLoggedIn={false} />
+    <RegisteredRoute path="/" component={App} isLoggedIn={true} />
   </Switch>
 )
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import StorePage from '../store/';
+import Model from '../model/';
 import CategoriesPage from '../../containers/categories/'
 
 const routes = [
@@ -16,11 +17,17 @@ const routes = [
   },
   {
     path: 'prepareModel',
+    exact: true,
     component: () => <div> Підготувати модель </div> 
   },
   {
+    exact: true,
     path: 'sell',
     component: () => <div>Продати модуль</div> 
+  },
+  {
+    path: 'model/:id',
+    component: Model
   }
 ];
 

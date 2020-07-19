@@ -45,24 +45,32 @@ const StorePage = () => {
   return (
     <>
       <HeroContainer title={ title } subTitle={ subTitle } />
-      <div className='store-navbar' >
-        <div className="store-navbar__menu">
-          <ul>
-            <li><span>Багети</span></li>
-            <li><span>Балясини</span></li>
-            <li><span>Двері</span></li>
-            <li><span>Декор</span></li>
-            <li><span>Декор угловий</span></li>
-            <li><span>Ікони</span></li>
-            <li><span>Капітель</span></li>
-            <li><span>Кронштейни</span></li>
-            <li><span>Мебель</span></li>
-            <li><span>Рамки</span></li>
-            <li><span>Розетки</span></li>
-            <li><span>Фасади</span></li>
-          </ul>
-        </div>  
-      </div>
+      { 
+        window.innerWidth > 700 ? (
+          <div className='store-navbar' >
+            <div className="store-navbar__menu">
+              <ul>
+                <li><span>Багети</span></li>
+                <li><span>Балясини</span></li>
+                <li><span>Двері</span></li>
+                <li><span>Декор</span></li>
+                <li><span>Декор угловий</span></li>
+                <li><span>Ікони</span></li>
+                <li><span>Капітель</span></li>
+                <li><span>Кронштейни</span></li>
+                <li><span>Мебель</span></li>
+                <li><span>Рамки</span></li>
+                <li><span>Розетки</span></li>
+                <li><span>Фасади</span></li>
+              </ul>
+            </div>  
+          </div>
+        ) : (
+          <div className="select-navbar__store">
+
+          </div>
+        )
+      }
       {
         categoriesModels.map(category => 
           <CategoriesModels title={category} > 

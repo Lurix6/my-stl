@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../../components/header';
 import classNames from 'classnames';
-import { Layout } from 'antd';
+import MobileNavigator from '../../components/mobileNavigator/';
 import AppRouter from './AppRouter'
 import './app.scss';
 
@@ -27,7 +27,7 @@ const resizeHendle = (e) => {
   return (
     <div className="appContainer"> 
       <div className={ classNames("navigation", { navigationOpen: visible })}>
-        Дравер
+        <MobileNavigator />
       </div>
       <div className={ classNames('container', {containerWithOpenNavigator: visible }) }>
         <Header changeVisible={changeVisible} />

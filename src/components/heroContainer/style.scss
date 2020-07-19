@@ -64,3 +64,19 @@
     }
   }
 }
+
+@media screen and (max-width: 700px) {
+  
+  .hero-content {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .hero-reader {
+      margin: 10px 0;
+
+      .hero-reader-search {
+        width: 100% !important;
+      }
+    }
+  }
+}

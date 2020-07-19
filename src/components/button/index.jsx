@@ -17,7 +17,7 @@ const Button = (props) => {
 
   }
 
-  const { className, id,children, label, ghost,  upperCase, lowerCase, icon, type } = props;
+  const { className, id,children, label, ghost,  upperCase, lowerCase, icon, type, ...restProps } = props;
 
   const text = renderText(children , label || '', upperCase, lowerCase);
 
@@ -27,7 +27,8 @@ const Button = (props) => {
         "button", className , 
         { "button-ghost": ghost },  
         `type-${type ? type : 'primary'}` )}
-      id={id}  
+      id={id}
+      { ...restProps }
     >
       <span className="button-text">
         { icon ? <span className="button-icon">{ icon }</span> : '' }

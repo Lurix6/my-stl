@@ -1,6 +1,5 @@
 .appContainer {
 
-
   .navigation {
     transition: transform .15s ease-in-out;
     transition-delay: 1s;
@@ -26,6 +25,7 @@
 .scrollBox {
   background: rgb(241, 243, 246);
   height: 100%;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 770px) {

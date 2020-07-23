@@ -1,9 +1,10 @@
 import React from 'react';
 import './style.scss';
-import { MailOutlined, FieldTimeOutlined, LockOutlined, StarFilled } from '@ant-design/icons';
+import { MailOutlined, FieldTimeOutlined, LockOutlined, StarFilled, PlusOutlined, ShareAltOutlined, FlagOutlined } from '@ant-design/icons';
 import Button from '../../components/button/';
 import { Link } from 'react-router-dom';
 import EyeIcon from '../../assets/img/eye.svg'
+import EmbedIcon from '../../assets/img/embed.svg'
 
 export default function() {
 
@@ -32,18 +33,23 @@ export default function() {
                 </div>
                 <div className="modal-status">
                   <div className="view-helper">
-                    <EyeIcon />
-                    <p>1.2k</p>
+                    <div>
+                      <EyeIcon />
+                      <span className="count">1.2k</span>
+                    </div>
                   </div>
                   <div className="add-helper">
                      <StarFilled />
-                    <p>100</p>
+                    <span className="count">100</span>
                   </div>
                 </div>
+              </div>
+              <div className="modal-actions">
+                <span><PlusOutlined />Додати</span>
+                <span><EmbedIcon/>Додати</span>
+                <span><ShareAltOutlined />Додати</span>
+                <span><FlagOutlined />Репорт</span>
 
-                <div className="modal-actions">
-
-                </div>
               </div>
             </div>
           </div>

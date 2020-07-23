@@ -8,9 +8,9 @@
 
 ## Installation
 
-* `git clone git@github.com:rwieruch/minimal-react-webpack-babel-setup.git`
-* cd minimal-react-webpack-babel-setup
+* `git clone https://github.com/Lurix6/my-stl.git`
+* cd my-stl
 * npm install
 * npm start
-* visit `http://localhost:3000/`
+* visit `http://localhost:5000/`
 "# my-stl" 

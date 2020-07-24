@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './style.scss';
-import { MailOutlined, FieldTimeOutlined, LockOutlined, StarFilled, PlusOutlined, ShareAltOutlined, FlagOutlined } from '@ant-design/icons';
 import Button from '../../components/button/';
 import { Link } from 'react-router-dom';
 import EyeIcon from '../../assets/img/eye.svg'
 import EmbedIcon from '../../assets/img/embed.svg'
+import { MailOutlined, CaretDownOutlined, TagOutlined ,InboxOutlined, 
+  FieldTimeOutlined, LockOutlined, StarFilled, 
+  PlusOutlined, ShareAltOutlined, FlagOutlined } from '@ant-design/icons';
+import Tag from '../../components/uielements/tag';
 
 export default function() {
 
@@ -21,6 +24,9 @@ export default function() {
                 <span className="model-name__label">Багет 1</span>
                 <span className="model-name__type">3D MODEL</span>
               </h1>
+              {
+
+              }
               <div className="model-owner__wrapper">
                 <div className="model-owner">
                   <Link to='/user/:id'>
@@ -46,10 +52,23 @@ export default function() {
               </div>
               <div className="modal-actions">
                 <span><PlusOutlined />Додати</span>
-                <span><EmbedIcon/>Додати</span>
-                <span><ShareAltOutlined />Додати</span>
+                <span><ShareAltOutlined />Поділитися</span>
                 <span><FlagOutlined />Репорт</span>
-
+              </div>
+              <div className="model-inf">
+                <section className="model-inf__description">
+                  <div className="model-inf__description__content">
+                    <p>Low poly hand painted water mill Based on a painting by Citetanoi Sceppass</p>
+                  </div>
+                  <div className="model-inf__list">
+                    <div className="model-inf__row" ><FieldTimeOutlined /> Published 5 years ago</div>
+                    <div className="model-inf__row" ><InboxOutlined /><Tag >Architecture 3D models</Tag></div>
+                    <div className="model-inf__row" ><TagOutlined /><Tag>dae</Tag><Tag>Cute</Tag><Tag>Grain</Tag><Tag>gg2015</Tag></div>
+                  </div>
+                </section>
+                <div className="shove-more-toggle" >
+                 <span>Show more <CaretDownOutlined /></span>
+                </div>
               </div>
             </div>
           </div>

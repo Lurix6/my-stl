@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 import EyeIcon from '../../assets/img/eye.svg'
 import EmbedIcon from '../../assets/img/embed.svg'
 import { MailOutlined, CaretDownOutlined, TagOutlined ,InboxOutlined, 
-  FieldTimeOutlined, LockOutlined, StarFilled, 
+  FieldTimeOutlined, LockOutlined, StarFilled,
   PlusOutlined, ShareAltOutlined, FlagOutlined } from '@ant-design/icons';
 import Tag from '../../components/uielements/tag';
 
 export default function() {
-
+  const width = window.innerWidth;
   return(
     <section className="model-page">
       <div className="model-page__content">
@@ -24,8 +24,24 @@ export default function() {
                 <span className="model-name__label">Багет 1</span>
                 <span className="model-name__type">3D MODEL</span>
               </h1>
-              {
-
+              { (width < 950) ?
+                (<div className="store-informations">
+                  <div className="store-informations__buy" >
+                    <div>
+                      <p className="store-informations__buy__price">$5</p>
+                      <Fragment>
+                        <div>{ ['', '', '', '', ''].map(star => <StarFilled />) }</div>
+                        <p className="store-informations__buy__reviews" >0 reviews</p>
+                      </Fragment>
+                    </div>
+                    <div className="store-informations__add-to-cart" >
+                      <Button>Add to cart</Button>
+                    </div>
+                  </div>
+                  <div className="store-informations__more"> 
+                    Show 3D model information
+                  </div>
+                </div>) : null
               }
               <div className="model-owner__wrapper">
                 <div className="model-owner">

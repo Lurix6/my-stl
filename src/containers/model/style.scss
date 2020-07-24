@@ -20,7 +20,6 @@
       .model-page__left__main {
 
         .modal-page__left__viewer-additional{
-
           .model-name {
             margin: 0 0 20px;
             font-size: 22px;
@@ -161,6 +160,52 @@
                 }
               }
             }
+          }
+        }
+
+        .store-informations {
+          display: block;
+          padding: 10px;
+          margin-top: -10px;
+          border: 1px solid #e7e7e7;
+          border-radius: 3px;
+          overflow: hidden;
+
+          .store-informations__buy {
+            display: flex;
+            justify-content: space-between;
+
+            .store-informations__buy__price {
+              font-size: 26px;
+              color: #df1660;
+              font-weight: 700;
+              margin-bottom: 8px;
+            }
+
+            .store-informations__buy__reviews {
+              margin-top: 5px;
+              color: #1caad9;
+            }
+
+            .store-informations__add-to-cart {
+              display: flex;
+
+              .button {
+                height: 40px;
+                margin: auto 0;
+              }
+            }
+          }
+
+          .store-informations__more {
+            margin-top: 10px;
+            width: 100%;
+            border: 1px solid #e7e7e7;
+            background-color: #f2f2f2;
+            border-radius: 3px;
+            padding: 10px 20px;
+            color: #1caad9;
+            text-align: center;
           }
         }
       }

@@ -45,7 +45,7 @@ Environment variables are useful when:
 * Environment variables can be changed easily - especially when running in CI.
 
 In the package.json file, you can customize the commands that will run files of different environments depending on your needs.
-![Git Hooks Error](src/assets/images/readmemd/env-settings.png)
+![Git Hooks Error](/src/assets/img/logo.jpg)
 
 ## License
 Recruitment App is [licensed as MIT](https://github.com/facebook/create-react-app/blob/master/LICENSE).
